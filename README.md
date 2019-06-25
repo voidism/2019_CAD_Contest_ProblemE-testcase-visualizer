@@ -1,4 +1,4 @@
-Visualize
+2019 CAD Contest ProblemE testcase & visualizer
 ===
 
 ### Requirements
@@ -9,9 +9,12 @@ Visualize
 ## Usage:
 
 
-## [canvas.py](https://github.com/raywu0123/Algorithms-2019Spring-Final-Project/blob/master/visualize/canvas.py)
+## Generate manual test case 
 
-1. `python3 canvas.py [write_file_name]`
+1. 
+```
+python3 canvas.py [write_file_name]
+```
 
 會跳出一個空白視窗
 
@@ -28,8 +31,41 @@ Visualize
 
 ![](https://i.imgur.com/fTUwZgU.jpg)
 
-## [draw_tk.py](https://github.com/raywu0123/Algorithms-2019Spring-Final-Project/blob/master/visualize/draw_tk.py)
+## Visualize input/output file pairs
 
+1. 
+```
+python3 draw_tk.py sample.in sample.out [window size(建議1000)]
+```
 
-1. `python3 draw_tk.py sample.in sample.out [window size(建議1000)]`
 2. 一直按"r"，一開始會把Merge跟Clip依序加入圖中，Merge是紅色Clip是綠色，M跟C都加完，會開始疊sample.out裡面最後split完的rectangles，要提前結束的話按"e"。
+
+## Random generate test case
+
+- rectangle test case only
+- Merge Clip 交替
+
+```
+python random_case.py [output_file_name] [# of pairs of Merge and Clip] [# of rectangles in a Merge or Clip]
+```
+
+## Verify by boolean mask
+
+- don't use this program to verify files that are over size (e.g. over 1000000 in window size), it will need large memory.
+
+```
+python verify.py [input_file_name] [output_file_name] [window size of testcase (max width of height)]
+```
+
+## Random testing
+
+- `./myPolygon` is needed in the same directory.
+- it will save the error case automatically for you to debug!
+- the error case and error output will be named as `errorcase.in.*`, `errorcase.out.*`.
+
+```
+bash run_test.sh [# of random testcase] [# of pairs of Merge and Clip in each testcase] [# of rectangles in a Merge or Clip]
+```
+
+---
+2019 CAD Contest Link: http://iccad-contest.org/2019/tw/problems.html
