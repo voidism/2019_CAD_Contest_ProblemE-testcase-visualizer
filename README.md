@@ -44,6 +44,7 @@ python3 draw_tk.py sample.in sample.out [window size(建議1000)]
 
 - rectangle test case only
 - Merge Clip 交替
+- 如果想讓測資的長寬範圍大一點，可以調[第90行](https://github.com/voidism/2019_CAD_Contest_ProblemE-testcase-visualizer/blob/3b90131e1d41a66d8a7f4b2895b3414ff6de360c/random_case.py#L90)這邊的height跟width，目前只有設1000/600。
 
 ```
 python random_case.py [output_file_name] [# of pairs of Merge and Clip] [# of rectangles in a Merge or Clip]
