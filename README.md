@@ -31,6 +31,12 @@ python3 canvas.py [write_file_name]
 
 ![](https://i.imgur.com/fTUwZgU.jpg)
 
+註：不能剩最後一步才按e，可能會生出這種瑕疵(左下角那裡)：
+
+![](https://i.imgur.com/hdfXZOe.png)
+
+例如畫四方形，點到第三個點就要按e了，不能四個都點完才按。
+
 ## Visualize input/output file pairs
 
 1. 
